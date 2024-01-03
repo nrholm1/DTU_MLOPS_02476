@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlops_mnist_classifier"
+version = "0.0.1"
+description = "\"Week 1 exercise for 02476 MLOps\""
+authors = [
+  { name = "s204503", email = "your@email.com" },
+]
+
+readme = "README.md"
+requires-python = "~=3.11"
+dynamic = ["dependencies", "optional-dependencies"]
+
+[tool.setuptools]
+packages = ["mlops_mnist_classifier"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.dynamic.optional-dependencies]
+dev = {file = ['requirements_dev.txt']}
+
+[tool.ruff]
+line-length = 120
+select = ["I"]
