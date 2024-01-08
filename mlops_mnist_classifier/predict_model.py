@@ -20,7 +20,8 @@ def predict(model_checkpoint, predict_path):
     model = torch.load(model_checkpoint)
     test_imgs = torch.Tensor(np.load(predict_path))
 
-    ps = torch.exp(model(test_imgs))
+    log_ps, _ = model(test_imgs.unsqueeze(1))
+    ps = torch.exp(log_ps)        
     top_p, top_class = ps.topk(1, dim=1)
     print(top_class)
 

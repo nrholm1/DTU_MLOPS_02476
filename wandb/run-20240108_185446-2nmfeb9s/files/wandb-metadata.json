@@ -1,0 +1,39 @@
+{
+    "os": "macOS-13.5-arm64-arm-64bit",
+    "python": "3.11.0",
+    "heartbeatAt": "2024-01-08T17:54:46.588169",
+    "startedAt": "2024-01-08T17:54:46.059664",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "train"
+    ],
+    "state": "running",
+    "program": "/Users/nielsraunkjaer/Desktop/Sem8/02476.nosync/mlops_mnist_classifier/mlops_mnist_classifier/train_model.py",
+    "codePathLocal": "mlops_mnist_classifier/train_model.py",
+    "codePath": "mlops_mnist_classifier/train_model.py",
+    "git": {
+        "remote": "https://github.com/nrholm1/DTU_MLOPS_02476",
+        "commit": "1bf4a97c72a6f2e70fb91002b116eee74355d900"
+    },
+    "email": "nielsraunkjaer@gmail.com",
+    "root": "/Users/nielsraunkjaer/Desktop/Sem8/02476.nosync/mlops_mnist_classifier",
+    "host": "0052d3cd5e.dynamic-ip4.rev.k-net.dk",
+    "username": "nielsraunkjaer",
+    "executable": "/usr/local/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 460.4317207336426,
+            "used": 9.28664779663086
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

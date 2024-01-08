@@ -37,12 +37,12 @@ clean:
 #################################################################################
 
 ## Process raw data into processed data
-data: #requirements
+data: requirements
 	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/data/make_dataset.py
 
 ## Train model
 train: 
-	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/train_model.py train --ep $(ep) --lr $(lr)
+	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/train_model.py train $(save_folder) --ep $(ep) --lr $(lr) 
 
 # Evaluate model on test set
 eval: 

@@ -8,7 +8,9 @@ from torch import mean, std
 
 
 def TransformMnist(x):
+    
     normalize_x = Normalize(mean=mean(x), std=std(x))
+    x = x.unsqueeze(-1)
     return lambda x: normalize_x(x)
 
 
