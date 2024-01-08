@@ -6,3 +6,11 @@ numpy
 matplotlib
 wandb
 pytorch_lightning
+dvc                      
+dvc-data               
+dvc-gdrive             
+dvc-http                 
+dvc-objects            
+dvc-render             
+dvc-studio-client        
+dvc-task               
