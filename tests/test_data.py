@@ -16,9 +16,9 @@ def test_data():
     
     train_imgs_shape = train_imgs[0].shape
     test_imgs_shape = test_imgs[0].shape
-    assert train_imgs_shape == torch.Size([1,28,28]) or train_imgs_shape == torch.Size([784])
-    assert test_imgs_shape == torch.Size([1,28,28]) or test_imgs_shape == torch.Size([784])
+    assert train_imgs_shape == torch.Size([28,28]) or train_imgs_shape == torch.Size([784])
+    assert test_imgs_shape == torch.Size([28,28]) or test_imgs_shape == torch.Size([784])
     
-    all_unique_targets = torch.Tensor([i for i in range(10)])
-    assert torch.sort(torch.unique(train_lbls)) == all_unique_targets
-    assert torch.sort(torch.unique(test_lbls)) == all_unique_targets
+    all_unique_targets = torch.Tensor([float(i) for i in range(10)])
+    assert torch.all(torch.sort(torch.unique(train_lbls))[0] == all_unique_targets)
+    assert torch.all(torch.sort(torch.unique(test_lbls))[0] == all_unique_targets)
