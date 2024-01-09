@@ -180,3 +180,4 @@ cython_debug/
 *.npy
 /data
 *.ckpt
+secret
