@@ -6,7 +6,8 @@ numpy
 matplotlib
 wandb
 pytorch_lightning
-dvc                      
+dvc              
+dvc-gs        
 dvc-data               
 dvc-gdrive             
 dvc-http                 
