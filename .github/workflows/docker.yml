@@ -14,6 +14,6 @@ jobs:
         run: |
           echo "${{ secrets.DOCKER_HUB }}" | docker login \
               -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io
-          docker build . --file Dockerfile \
+          docker build . --file dockerfiles/easy.dockerfile \
               --tag docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
           docker push docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
