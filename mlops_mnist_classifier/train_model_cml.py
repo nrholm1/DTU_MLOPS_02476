@@ -5,15 +5,15 @@ from models.model import MyAwesomeModel
 from data.dataset import MyDataset, TransformMnistProcessed
 from datetime import datetime
 
-import wandb
+# import wandb
 
 def main(lr=1e-3, ep=5):
     """Train a model on MNIST."""
 
-    wandb.init(
-        project="MLOPS CNN",
-        notes="My first experiment [TorchLightning]",
-        )
+    # wandb.init(
+    #     project="MLOPS CNN",
+    #     notes="My first experiment [TorchLightning]",
+    #     )
 
     training_start_time = datetime.now()
     print(f"Training started at: {training_start_time}")
@@ -26,7 +26,7 @@ def main(lr=1e-3, ep=5):
     test_set = MyDataset(imgs, lbls, transform=TransformMnistProcessed(imgs))
     testloader = torch.utils.data.DataLoader(test_set, batch_size=64, shuffle=False)
 
-    trainer = pl.Trainer(max_epochs=5, logger=pl.loggers.WandbLogger(project='MNIST simple CNN'), precision="16-mixed")
+    trainer = pl.Trainer(max_epochs=5, precision="16-mixed")
     trainer.fit(model=model, train_dataloaders=trainloader, val_dataloaders=testloader)
 
     preds, target = [], []
