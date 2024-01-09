@@ -66,7 +66,7 @@ class MyAwesomeModel(pl.LightningModule):
         train_loss = self.criterion(log_ps, labels)
 
         self.log("train_loss", train_loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
-        self.logger.experiment.log({'logits': wandb.Histogram(exp(log_ps).detach().cpu())})
+        # self.logger.experiment.log({'logits': wandb.Histogram(exp(log_ps).detach().cpu())})
 
         return train_loss
 
