@@ -1,5 +1,5 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/mlops-410711/trainer', '-f', '/dockerfiles/easy.dockerfile', '.']
+    args: ['build', '-t', 'gcr.io/mlops-410711/trainer', '-f', 'dockerfiles/easy.dockerfile', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/mlops-410711/trainer']
